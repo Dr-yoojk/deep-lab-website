@@ -3,7 +3,7 @@ import kistLogo from '../imports/kist-logo.png'
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-100" style={{ backgroundColor: 'rgb(255,255,255)' }}>
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-10 py-12">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-10 pt-12 pb-24 lg:pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-8">
 
           {/* Left: spacer to balance the logo column so the center block stays truly centered */}
@@ -28,12 +28,13 @@ export default function Footer() {
                 </a>
               </span>
               <span className="hidden sm:block text-gray-200">|</span>
-              <span className="flex items-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-[#003087] flex-shrink-0">
+              <span className="block sm:inline text-center leading-relaxed">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="inline-block align-[-2px] mr-1.5 text-[#003087]">
                   <path d="M7 1a4 4 0 0 1 4 4c0 3-4 8-4 8S3 8 3 5a4 4 0 0 1 4-4z" stroke="currentColor" strokeWidth="1.2"/>
                   <circle cx="7" cy="5" r="1.5" stroke="currentColor" strokeWidth="1.2"/>
                 </svg>
-                <span>5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</span>
+                5, Hwarang-ro 14-gil, Seongbuk-gu,
+                <br className="sm:hidden" /> Seoul, Republic of Korea
               </span>
             </div>
 
