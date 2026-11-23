@@ -22,6 +22,7 @@ import galleryBatterySymposium2026 from '../imports/gallery-battery-symposium-20
 import awardsDasolKwonCeremony from '../imports/awards-dasol-kwon-ceremony.jpg'
 import awardsDasolKwonList from '../imports/awards-dasol-kwon-list.png'
 import researchCntNetworks from '../imports/research-cnt-networks.jpg'
+import researchConductiveAdditives from '../imports/research-conductive-additives.jpg'
 import researchWetSlurryProcess from '../imports/research-wet-slurry-process.jpg'
 import researchVietnamDeputyPmVisit1 from '../imports/research-vietnam-deputy-pm-visit-1.jpg'
 import researchVietnamDeputyPmVisit2 from '../imports/research-vietnam-deputy-pm-visit-2.jpg'
@@ -277,7 +278,7 @@ export const RESEARCH_AREAS: ResearchArea[] = [
       'Dispersant-free debundling methods',
       'Industry technology transfer track record',
     ],
-    image: researchCntNetworks,
+    image: researchConductiveAdditives,
     color: '#003087',
   },
   {
