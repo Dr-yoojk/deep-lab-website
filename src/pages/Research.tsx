@@ -54,7 +54,7 @@ function ResearchAreaBlock({ area }: { area: (typeof RESEARCH_AREAS)[0] }) {
         {/* Fixed 16:9 frame; figures are shown whole (no cropping). Requested size: 1600×900 px. */}
         <div className="relative aspect-video bg-white border-b border-gray-100 flex items-center justify-center flex-shrink-0">
           {area.image ? (
-            <img src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-contain p-2" />
+            <img src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-contain" />
           ) : (
             <span className="text-[13px] font-medium text-gray-400 tracking-wide uppercase">Image update pending</span>
           )}
