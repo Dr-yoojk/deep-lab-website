@@ -51,9 +51,10 @@ function ResearchAreaBlock({ area }: { area: (typeof RESEARCH_AREAS)[0] }) {
     >
       <div className="flex flex-col h-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300">
         {/* Image */}
-        <div className="relative h-52 bg-gray-100 flex items-center justify-center flex-shrink-0">
+        {/* Fixed 16:9 frame; figures are shown whole (no cropping). Requested size: 1600×900 px. */}
+        <div className="relative aspect-video bg-white border-b border-gray-100 flex items-center justify-center flex-shrink-0">
           {area.image ? (
-            <img src={area.image} alt={area.title} className="w-full h-full object-cover" />
+            <img src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-contain p-2" />
           ) : (
             <span className="text-[13px] font-medium text-gray-400 tracking-wide uppercase">Image update pending</span>
           )}
