@@ -229,7 +229,7 @@ function AlumniCard({ member }: { member: Member }) {
       {/* Current position */}
       {member.job && (
         <div className="mt-auto pt-3 border-t border-gray-100 text-center">
-          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-gray-400 mb-0.5">Now at</p>
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-gray-400 mb-0.5">Current Position</p>
           <p className="text-[13px] font-semibold text-[#003087]">{member.job}</p>
         </div>
       )}
