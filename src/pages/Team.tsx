@@ -18,6 +18,11 @@ import shinYuyeongPhoto from '../imports/team-shin-yuyeong.jpg'
 import kimSeongraePhoto from '../imports/team-kim-seongrae.jpg'
 import kimMinsolPhoto from '../imports/team-kim-minsol.jpg'
 import kimMinjeongPhoto from '../imports/team-kim-minjeong.jpg'
+import kimHanminPhoto from '../imports/team-kim-hanmin.jpg'
+import yooByeongilPhoto from '../imports/team-yoo-byeongil.jpg'
+import hwangYounggeunPhoto from '../imports/team-hwang-younggeun.jpg'
+import jeongYejiPhoto from '../imports/team-jeong-yeji.jpg'
+import jeonWonyongPhoto from '../imports/team-jeon-wonyong.jpg'
 
 // ── PI data ────────────────────────────────────────────────────────────────
 
@@ -71,6 +76,8 @@ interface Member {
   photo?: string
   research?: string
   email?: string
+  /** Alumni only: current position */
+  job?: string
 }
 
 const POSTDOC: Member[] = [
@@ -102,15 +109,15 @@ const ALUMNI_GRAD_POSTDOC: Member[] = [
   { nameKo: '김민정', nameEn: 'Minjeong Kim', role: 'M.S. Graduate', photo: kimMinjeongPhoto, research: 'Dry Process' },
   { nameKo: '김민솔', nameEn: 'Minsol Kim', role: 'M.S. Graduate', photo: kimMinsolPhoto, research: 'Wet Fluorine-Free Binder' },
   { nameKo: '이진이', nameEn: 'Jiny Lee', role: 'M.S. Graduate' },
-  { nameKo: '정예지', nameEn: 'Yea-Ji Jeong', role: 'M.S. Graduate' },
-  { nameKo: '전원용', nameEn: 'Won-Yong Jeon', role: 'M.S. Graduate' },
-  { nameKo: '김한민', nameEn: 'Han-Min Kim', role: 'M.S. Graduate' },
-  { nameKo: '유병일', nameEn: 'Byeong-Il Yoo', role: 'M.S. Graduate' },
+  { nameKo: '정예지', nameEn: 'Yea-Ji Jeong', role: 'M.S. Graduate', photo: jeongYejiPhoto, research: 'Cathode Dispersant / Binder', job: 'LG Energy Solution' },
+  { nameKo: '전원용', nameEn: 'Won-Yong Jeon', role: 'M.S. Graduate', photo: jeonWonyongPhoto, research: 'Cathode Conductive Additive / High-Solids Slurry', job: 'LG Energy Solution' },
+  { nameKo: '김한민', nameEn: 'Han-Min Kim', role: 'M.S. Graduate', photo: kimHanminPhoto, research: 'Composites / Dry Process', job: 'Solvay, Scienceco' },
+  { nameKo: '유병일', nameEn: 'Byeong-Il Yoo', role: 'M.S. Graduate', photo: yooByeongilPhoto, research: 'Anode Conductive Additive / Binder', job: 'Samsung SDI' },
 ]
 
 const ALUMNI_RESEARCH_INTERN: Member[] = [
   { nameKo: '박병진', nameEn: 'Byeongjin Park', role: 'Research Intern', photo: parkByeongjinPhoto, research: 'Dry Electrode Cathode' },
-  { nameKo: '황영근', nameEn: 'Younggeun Hwang', role: 'Research Intern' },
+  { nameKo: '황영근', nameEn: 'Younggeun Hwang', role: 'Research Intern', photo: hwangYounggeunPhoto, research: 'LFP Cathode Binder', job: 'LG Chem' },
 ]
 
 // Used by the Home page's PI card and stats band.
@@ -218,6 +225,14 @@ function AlumniCard({ member }: { member: Member }) {
       <div className="text-center">
         {member.research && <p className="text-[12px] text-gray-500">{member.research}</p>}
       </div>
+
+      {/* Current position */}
+      {member.job && (
+        <div className="mt-auto pt-3 border-t border-gray-100 text-center">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-gray-400 mb-0.5">Now at</p>
+          <p className="text-[13px] font-semibold text-[#003087]">{member.job}</p>
+        </div>
+      )}
     </div>
   )
 }
