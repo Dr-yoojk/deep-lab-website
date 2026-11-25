@@ -475,8 +475,8 @@ function CurrentMembersSection() {
 
         <MemberGroup title="Postdoctoral Researcher" members={POSTDOC} />
         <MemberGroup title="Ph.D. & Integrated M.S./Ph.D. Students" members={PHD_INTEGRATED} />
-        <MemberGroup title="Research Intern" members={RESEARCH_INTERN} />
         <MemberGroup title="Master's Student" members={MASTERS_STUDENTS} />
+        <MemberGroup title="Research Intern" members={RESEARCH_INTERN} />
       </div>
     </section>
   )
